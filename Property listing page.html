@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Land Company Property Listings </title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LandCom</div>
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Company Information.html">About Us</a></li>
+            <li><a href="Property detail.html">Services</a></li>
+            <li><a href="Property listing page.html">Properties</a></li>
+            <li><a href="Index.html">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+    </nav>
+<!-- Property Listings Section -->
+<section class="property-listings">
+    <h2>Property Listings</h2>
+
+    <!-- Filter and Search Functionality -->
+    <div class="filter-bar">
+        <input type="text" placeholder="Search by location or keywords" id="search-keywords">
+        <select id="property-type-filter">
+            <option value="">Property Type</option>
+            <option value="commercial">Commercial Land</option>
+            <option value="residential">Residential Land</option>
+            <option value="farm">Farm Land</option>
+        </select>
+        <input type="number" placeholder="Max Price" id="price-filter">
+        <input type="number" placeholder="Min Lot Size (acres)" id="lot-size-filter">
+        <button class="filter-button"><i class="fas fa-filter"></i> Apply Filters</button>
+    </div>
+
+    <!-- Property Listings Grid -->
+    <div class="property-grid">
+        <div class="property-card">
+            <img src="assets/card 2.jpg" alt="Property 1">
+            <h3>Spacious Land in Texas</h3>
+            <p>Price: $300,000</p>
+            <p>Lot Size: 10 acres</p>
+            <a href="#property-details" class="view-details">View Details</a>
+        </div>
+        <div class="property-card">
+            <img src="assets/card 3.jpg" alt="Property 2">
+            <h3>Commercial Land in California</h3>
+            <p>Price: $500,000</p>
+            <p>Lot Size: 5 acres</p>
+            <a href="#property-details" class="view-details">View Details</a>
+        </div>
+        <!-- More property cards can be added as needed -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <button class="prev-page">Previous</button>
+        <span class="page-number"></span>
+        <button class="next-page">Next</button>
+    </div>
+</section>
+
+<!-- Property Details Modal -->
+<div class="property-details-modal" id="property-details">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="property-images">
+            <img src="assets/card 4.jpg" alt="Detailed Property Image 4">
+            <img src="assets/card 2.jpg" alt="Detailed Property Image 2">
+            <img src="assets/card 3.jpg" alt="Detailed Property Image 3">
+            <img src="assets/Front card 2.jpg" alt="Detailed Property Image 5">
+        </div><br>
+        <div class="property-description<br>">
+            <h3>Spacious Land in Texas</h3>
+            <p>Price: $300,000</p>
+            <p>Lot Size: 10 acres</p>
+            <p>Land Type: Agricultural</p>
+            <p>Description: Beautiful and spacious land perfect for farming or residential use. Located in a prime area of Texas.</p>
+        </div>
+        <div class="property-location">
+            <h4>Location:</h4>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5595973.150632138!2d63.59026615831931!3d30.053857451155803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1741416478560!5m2!1sen!2s" width="1400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div> <!-- Google Maps Placeholder -->
+        </div>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About LandCo</h3>
+            <p>We provide the best land investment opportunities and property management services. Explore our properties and secure your future with LandCo.</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@landco.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 LandCo Street, YourCity, YourCountry</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 LandCo. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

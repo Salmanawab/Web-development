@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Property detail </title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">LandCom</div>
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Company Information.html">About Us</a></li>
+            <li><a href="Property detail.html">Services</a></li>
+            <li><a href="Property listing page.html">Properties</a></li>
+            <li><a href="Index.html">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+    </nav>
+    
+<!-- Property Details Page -->
+<section class="property-details-page">
+    <div class="property-header">
+        <h1>Spacious Land in Texas</h1>
+        <p class="property-price">Price: $300,000</p>
+        <p class="property-lot-size">Lot Size: 10 acres</p>
+        <p class="property-zoning">Zoning: Agricultural</p>
+    </div>
+
+    <!-- Image Gallery/Slider -->
+    <div class="image-gallery">
+        <div class="gallery-slider">
+            <img src="assets/Image 1.jpg" alt="Image 1">
+            <img src="assets/Image 2.jpg" alt="Image 2">
+            <img src="assets/image 3.jpg" alt="Image 3">
+        </div>
+        <button class="prev-slide">&lt;</button>
+        <button class="next-slide">&gt;</button>
+        
+    </div>
+
+    <!-- Description Section -->
+    <div class="property-description">
+        <h2>Property Description</h2>
+        <p>This beautiful 10-acre land is perfect for farming or residential use. Located in a prime area of Texas, it offers rich soil, access to water sources, and breathtaking views of the countryside. The zoning allows for various agricultural activities, making it ideal for both investors and private buyers.</p>
+    </div>
+
+    <!-- Google Maps Integration -->
+    <div class="property-map">
+        <h2>Property Location</h2>
+        <div id="">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5595973.150632138!2d63.59026615831931!3d30.053857451155803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1741416478560!5m2!1sen!2s" width="1147" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> <!-- Placeholder for Google Maps -->
+    </div>
+ 
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About LandCo</h3>
+            <p>We provide the best land investment opportunities and property management services. Explore our properties and secure your future with LandCo.</p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@landco.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 LandCo Street, YourCity, YourCountry</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 LandCom. All rights reserved.</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
